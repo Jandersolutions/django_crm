@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.1/united/bootstrap.min.css" integrity="sha512-rihDyq9HlsryIsG9yZ8eAgxlospfNzROydZXLk9+LjDuhysnBF5MseWpMqg8kXD6iZY62RKrZtNtILTYx5FYhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" >
+
+</head>
+
+<body class="d-flex flex-column">
+  <div class="sidenav">
+         <div class="login-main-text">
+            <h2><i class="fa fa-users" aria-hidden="true"></i> CRM<br>Sistema de Gestão de Clientes</h2>            
+         </div>
+      </div>
+      <div class="main">
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+               <form action="submit", method="POST">{% csrf_token %}
+                  <div class="form-group">
+                     <label>Usuário</label>
+                     <input type="text" class="form-control" placeholder="Usuário" name="username">
+                  </div>
+                  <div class="form-group">
+                     <label>Senha</label>
+                     <input type="password" class="form-control" placeholder="Senha" name="password">
+                  </div>
+                  {% if messages %}
+                      {% for message in messages %}
+                          <div class="alert alert-danger">{{ message }}</div>
+                      {% endfor %}
+
+                  {% endif %}
+                  <button type="submit" class="btn btn-black">Login</button>                 
+               </form>
+            </div>
+         </div>
+      </div>
+</body>
+</html>

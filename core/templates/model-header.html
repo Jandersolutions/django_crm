@@ -1,0 +1,12 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href={% url 'index'%}><i class="fa-solid fa-address-card"></i> CRM</a>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'customer:customer-list' %}"><i class="fa-solid fa-clipboard-user"></i> Clientes</a>
+        </li>
+        <li>
+            <a class="nav-link" href="#"><i class="fa-solid fa-circle-question"></i> Ajuda </a>
+        </li>
+    </ul>
+    <a class="" href="{% url 'logout' %}"><i class="fa-solid fa-circle-xmark"></i> Sair</a>
+</nav>
