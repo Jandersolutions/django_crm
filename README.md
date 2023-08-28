@@ -1,3 +1,11 @@
+<p align="center">
+<img 
+    src="t1.png"
+    width="1200"  
+/>
+</p>
+
+
 # Sistema de Gestão de Clientes **DJANGO CRM**
 ## Descrição
 
@@ -53,9 +61,12 @@
 
 ## Capturas de Tela
 
-📸 Tela de Cadastro de Clientes
-📸 Tela de Detalhes do Cliente
-📸 Tela de Histórico de Compras
+📸 Tela de Inicio
+<p><img src="t1.png"width="400"  /></p>
+📸 Tela de Cadastros do Cliente
+<img src="t2.png"width="400"  />
+📸 Tela de Visualização de Clientes
+<img src="t3.png"width="400"  />
 
 ## Aviso
 
